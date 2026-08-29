@@ -12,3 +12,7 @@ build:
 
 clean:
 	rm -rf $(BUILD_DIR)
+
+deploy:
+	scp -i "SNIPEIT.pem" ./bin/rfelogappwasap ubuntu@ec2-18-227-182-12.us-east-2.compute.amazonaws.com:/home/ubuntu/apps/notify-api/
+	
